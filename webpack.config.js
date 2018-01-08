@@ -5,20 +5,17 @@ console.log('Webpack config is in', __dirname);
 
 console.log('slsw found Entries: ', slsw.lib.entries);
 
-// Get the names of all functions from the current serverless instance
-const allFuncNames = slsw.lib.serverless.service.getAllFunctions();
 
 module.exports = {
   target: 'node',
   // Generate sourcemaps for proper error messages
   devtool: 'source-map',
-  // Since 'aws-sdk' is not compatible with webpack,
-  // we exclude all node dependencies
-  externals: [
-  ],
+  // Since Azure Functions is slow to load many small files, we should have NO externals (if at all possible)
+  externals: [],
   entry: slsw.lib.entries,
   output: {
     libraryTarget: 'commonjs',
+    // .webpack folder should be relative to the directory where we execute sls command
     path: path.resolve(process.cwd(), '.webpack'),
     filename: '[name].js',
   },

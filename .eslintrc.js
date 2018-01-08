@@ -12,13 +12,14 @@ const config = {
   },
   "rules": {
     // -- base rules
+    "arrow-body-style": ["error", "always"],
     "arrow-parens": ["error", "always"],
     "class-methods-use-this": "off",
     "consistent-return": "off",
     "comma-dangle": "off",
     "func-names": "off",
     "generator-star-spacing": ["error", "after"],
-    "max-len": ["error", { "code": 180 }],
+    "max-len": ["error", { "code": 120 }],
     "no-console": "off",
     // disallow certain syntax forms (keep ForOfStatement OK)
     'no-restricted-syntax': [
@@ -34,7 +35,6 @@ const config = {
     "promise/catch-or-return": "error",
     "promise/no-native": "off",
     "promise/param-names": "error",
-    "no-nested-ternary": "off",
   },
   "plugins": [
     "promise",
