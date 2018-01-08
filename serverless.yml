@@ -1,0 +1,61 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: serverless-azure-webpack-sample # NOTE: update this with your service name
+
+# Use the serverless-webpack plugin to transpile ES6
+plugins:
+  - serverless-offline
+  - serverless-webpack
+  - serverless-azure-functions
+
+custom:
+  serverless-offline:
+      port: 4000
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+package:
+  individually: true
+
+provider:
+  name: azure
+  location: East US
+  region: us-east-1
+
+functions:
+  hello:
+    handler: index.hello
+    events:
+      - http: true
+        x-azure-settings:
+          route: hello
+          authLevel: anonymous
+          name: req
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: res
+  world:
+    handler: index.world
+    events:
+      - http: true
+        x-azure-settings:
+          route: world
+          authLevel: anonymous
+          name: req
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: res

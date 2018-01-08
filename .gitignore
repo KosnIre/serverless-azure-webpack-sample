@@ -1,0 +1,16 @@
+# Output files and Dependencies
+node_modules
+dist
+.webpack
+.serverless
+
+# Coverage directory
+coverage
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Azure-specific files
+*-function.json
