@@ -5,7 +5,7 @@
 import asyncMessage from '../common/asyncMessage';
 
 
-export default async (context) => {
+export async function handler(context) {
   // NOTE: context.log NOT console.log
   // Azure will show context.log() calls in the streaming logs (e.g. sls logs -f hello)
   context.log.info('Hello Azure context logging.');
@@ -15,4 +15,4 @@ export default async (context) => {
     status: 200, // The HTTP status code of the response.
     body: `Go Serverless! ${message}`
   };
-};
+}

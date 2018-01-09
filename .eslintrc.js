@@ -31,6 +31,7 @@ const config = {
     "no-param-reassign": "off",
     "no-use-before-define": ["error", { "functions": false, "classes": true, "variables": true }],
     // -- plugin rules
+    "import/prefer-default-export": "off",
     "promise/always-return": "error",
     "promise/catch-or-return": "error",
     "promise/no-native": "off",
