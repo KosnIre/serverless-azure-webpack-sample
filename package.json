@@ -4,24 +4,33 @@
   "description": "A small template showing how serverless-azure-functions and serverless-webpack can be used together",
   "main": "index.js",
   "scripts": {
-    "test": "rm -rf .serverless && rm -rf .webpack && npm i serverless-azure-functions && sls package"
+    "clean": "rm -rf .serverless && rm -rf .webpack",
+    "test": "npm run clean && npm i serverless-azure-functions && sls package"
   },
   "author": {
     "name": "KosnIre",
     "email": "kosnire@gmail.com"
   },
-  "license": "MIT",
-  "dependencies": {
-    "babel-loader": "^7.1.2",
-    "serverless-azure-functions": "git+ssh://git@github.com/serverless/serverless-azure-functions.git#b248b5bb514ad5e96d94204c957772171122a0b4",
-    "serverless-offline": "^3.16.0",
-    "serverless-webpack": "^4.2.0",
-    "webpack": "^3.10.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KosnIre/serverless-azure-webpack-sample"
   },
+  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-source-map-support": "^1.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
     "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-promise": "^3.6.0"
+    "eslint-plugin-promise": "^3.6.0",
+    "serverless-azure-functions": "git+ssh://git@github.com/KosnIre/serverless-azure-functions#webpack_function_json",
+    "serverless-offline": "^3.16.0",
+    "serverless-webpack": "^4.2.0",
+    "webpack": "^3.10.0"
   }
 }
