@@ -15,9 +15,9 @@ service: serverless-azure-webpack-sample # NOTE: update this with your service n
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
-  - serverless-offline
-  - serverless-webpack
   - serverless-azure-functions
+  - serverless-webpack
+  - serverless-offline
 
 custom:
   serverless-offline:
@@ -36,7 +36,7 @@ provider:
 
 functions:
   hello:
-    handler: index.hello
+    handler: hello/index.js
     events:
       - http: true
         x-azure-settings:
@@ -47,8 +47,8 @@ functions:
         x-azure-settings:
           direction: out
           name: res
-  world:
-    handler: index.world
+  sortFood:
+    handler: sortFood/index.js
     events:
       - http: true
         x-azure-settings:
