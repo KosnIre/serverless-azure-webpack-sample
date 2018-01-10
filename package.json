@@ -4,8 +4,9 @@
   "description": "A small template showing how serverless-azure-functions and serverless-webpack can be used together",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf .serverless && rm -rf .webpack",
-    "test": "npm run clean && npm i serverless-azure-functions && sls package"
+    "clean": "rm -f ./*-function.json && rm -rf .serverless .webpack",
+    "pack": "npm run clean && sls package",
+    "test": "echo No tests set up yet"
   },
   "author": {
     "name": "KosnIre",

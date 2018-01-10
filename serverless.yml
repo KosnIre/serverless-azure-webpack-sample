@@ -1,19 +1,19 @@
 # Welcome to Serverless!
 #
 # This file is the main config file for your service.
-# It's very minimal at this point and uses default values.
+# It's very minimal at this point.
 #
 # For full config options, check the docs:
 #    docs.serverless.com
 #
 # Happy Coding!
 
-service: serverless-azure-webpack-sample # NOTE: update this with your service name
+service: serverless-azure-webpack-sample  # NOTE: update this with your service name
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
   - serverless-azure-functions
-  - serverless-webpack
+  - serverless-webpack  # plugin order is important! azure-functions MUST be listed BEFORE webpack
   - serverless-offline
 
 custom:
