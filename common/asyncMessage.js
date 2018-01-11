@@ -13,7 +13,7 @@
 export default function asyncMessage({ delay, text }) {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(`${text} (with a delay)`);
+      resolve(`${text} (with a delay of ${delay}s)`);
     }, delay * 1000);
   });
 }

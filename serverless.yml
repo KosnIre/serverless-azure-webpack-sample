@@ -25,6 +25,8 @@ custom:
 
 package:
   individually: true
+  exclude:
+    - credentials/**  # This is only necessary if you're not using webpack, but I'm leaving it here since it's sensitive data
 
 provider:
   name: azure
