@@ -14,11 +14,9 @@ If you bundle everything with webpack, you can significantly reduce the cold sta
 1. Download a copy of this repository
 2. If you haven't already, install [Node.js](https://nodejs.org/en/) and [the Serverless Framework][sls-azure-install].
 3. Enter the local repository directory and run `npm install` to install the project dependencies.
-  - This will install `serverless-azure-functions` and `serverless-webpack`.
-  - The dependecy for `serverless-azure-functions` is currently my own fork because support is not yet available in the main repository.
-  See [this open PR][sls-azure-pr] for more information.
+  - The project dependencies include `serverless-azure-functions` and `serverless-webpack`.
 4. If you don't already have one, create a Microsoft Azure account as described in the ["Quick Start" section][sls-azure-quick-start] of the guide.
-4. In the local `./credentials` directory, copy the `template.sh` file and fill in the values according to the Azure Credentials guide [found here] [sls-azure-credentials].
+5. In the local `./credentials` directory, copy the `template.sh` file and fill in the values according to the Azure Credentials guide [found here][sls-azure-credentials].
   - This file will be used to export env vars that allow uploads to your Azure account.
   You will need to run `source credentials/<your-account>.sh` only when you open a new terminal tab.
   - If running Windows, the PowerShell equivalent can be found at the same link above.
