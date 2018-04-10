@@ -1,3 +1,11 @@
+/**
+ * @file This is a rudimentary utility file used to demonstrate file imports.
+ *
+ * The code here simply sorts foods based on the categories in the KNOWN_FOODS object,
+ * then does an alphabetical sort.
+ */
+
+
 const KNOWN_FOODS = {
   fruits: ['apple', 'banana', 'kiwi', 'mango', 'orange', 'pear'],
   vegetables: ['broccoli', 'carrot', 'mushroom'],

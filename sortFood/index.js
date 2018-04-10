@@ -1,5 +1,6 @@
 /**
- * @file Simple hello function to test that we can get a response from Azure Functions
+ * @file This function demonstrates that we can import code from other
+ * files using babel and webpack.
  */
 
 import sortFood from './foodSorter';
