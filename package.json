@@ -1,6 +1,6 @@
 {
   "name": "serverless-azure-webpack-sample",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A small template showing how serverless-azure-functions and serverless-webpack can be used together",
   "main": "index.js",
   "scripts": {
